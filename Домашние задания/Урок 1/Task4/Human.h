@@ -6,33 +6,25 @@
 class Human
 {
 public:
-	Human(const char* initials, const char* gender, const size_t& age) :
-		m_initials{initials? new char[strlen(initials) + 1] : nullptr},
-		m_gender{gender? new char[strlen(gender) + 1] : nullptr}, m_age{age}
-	{
-		if (m_initials) { strcpy_s(m_initials, strlen(initials) + 1, initials); };
-		if (m_gender) { strcpy_s(m_gender, strlen(gender) + 1, gender); };
-	}
+	Human(const std::string& initials, const size_t& age) :
+		m_initials{initials}, m_age{age} {}
 
-	Human() : Human{nullptr, nullptr, 0} {}
+	Human() : Human{"", 0} {}
+
+	Human(const Human& human)
+	{
+		m_initials = human.m_initials;
+		m_age = human.m_age;
+	}
 
 	void ShowHumanInfo()
 	{
 		std::cout << "Инициалы: " << m_initials << std::endl;
-		std::cout << "Гендер: " << m_gender<< std::endl;
 		std::cout << "Возраст: " << m_age << std::endl;
 	}
 
-	~Human()
-	{
-		delete[] m_initials;
-		delete[] m_gender;
-		std::cout << "Вызван деструктор";
-	}
-
 private:
-	char* m_initials;
-	char* m_gender;
+	std::string m_initials;
 	size_t m_age;
 };
 

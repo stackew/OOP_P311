@@ -1,11 +1,23 @@
 #include <iostream>
+#include <numeric>
 
 #include "Fraction.h"
 
-int Fraction::gcd(int numerator, int denominator)
+const Fraction operator+(const Fraction& frac1, const Fraction& frac2)
 {
-	if (denominator == 0) return numerator;
-	return gcd(denominator, numerator % denominator);
+	return Fraction::FractionSum(frac1, frac2);
+}
+const Fraction operator-(const Fraction& frac1, const Fraction& frac2)
+{
+	return Fraction::FractionSub(frac1, frac2);
+}
+const Fraction operator*(const Fraction& frac1, const Fraction& frac2)
+{
+	return Fraction::FractionMulti(frac1, frac2);
+}
+const Fraction operator/(const Fraction& frac1, const Fraction& frac2)
+{
+	return Fraction::FractionDiv(frac1, frac2);
 }
 
 Fraction Fraction::InputData()
@@ -31,20 +43,20 @@ void Fraction::SimplifyFraction(Fraction& fraction)
 	int numerator = fraction.m_numerator;
 	int denominator = fraction.m_denominator;
 
-	fraction.m_numerator = numerator / gcd(numerator, denominator);
-	fraction.m_denominator = denominator / gcd(numerator, denominator);
+	fraction.m_numerator = numerator / std::gcd(numerator, denominator);
+	fraction.m_denominator = denominator / std::gcd(numerator, denominator);
 }
 
-void Fraction::DenReduction(Fraction const& fraction1, Fraction const& fraction2,
+void Fraction::DenReduction(const Fraction& fraction1, const Fraction& fraction2,
 	Fraction& answer)
 {
 
-	answer.m_denominator = gcd(fraction1.m_denominator, fraction2.m_denominator);
+	answer.m_denominator = std::gcd(fraction1.m_denominator, fraction2.m_denominator);
 	answer.m_denominator = (fraction1.m_denominator * fraction2.m_denominator) /
 		answer.m_denominator;
 }
 
-void Fraction::FractionSum(Fraction& fraction1, Fraction& fraction2)
+Fraction Fraction::FractionSum(const Fraction& fraction1, const Fraction& fraction2)
 {
 	Fraction answer;
 
@@ -56,11 +68,11 @@ void Fraction::FractionSum(Fraction& fraction1, Fraction& fraction2)
 
 	SimplifyFraction(answer);
 
-	std::cout << "Получившаяся дробь: " << answer.m_numerator
-		<< "/" << answer.m_denominator << std::endl;
+	return answer;
+
 }
 
-void Fraction::FractionSub(Fraction& fraction1, Fraction& fraction2)
+Fraction Fraction::FractionSub(const Fraction& fraction1, const Fraction& fraction2)
 {
 	Fraction answer;
 
@@ -72,11 +84,10 @@ void Fraction::FractionSub(Fraction& fraction1, Fraction& fraction2)
 
 	SimplifyFraction(answer);
 
-	std::cout << "Получившаяся дробь: " << answer.m_numerator
-		<< "/" << answer.m_denominator << std::endl;
+	return answer;
 }
 
-void Fraction::FractionMulti(Fraction& fraction1, Fraction& fraction2)
+Fraction Fraction::FractionMulti(const Fraction& fraction1, const Fraction& fraction2)
 {
 	Fraction answer;
 
@@ -85,11 +96,10 @@ void Fraction::FractionMulti(Fraction& fraction1, Fraction& fraction2)
 
 	SimplifyFraction(answer);
 
-	std::cout << "Получившаяся дробь: " << answer.m_numerator
-		<< "/" << answer.m_denominator << std::endl;
+	return answer;
 }
 
-void Fraction::FractionDiv(Fraction& fraction1, Fraction& fraction2)
+Fraction Fraction::FractionDiv(const Fraction& fraction1, const Fraction& fraction2)
 {
 	Fraction answer;
 
@@ -98,6 +108,14 @@ void Fraction::FractionDiv(Fraction& fraction1, Fraction& fraction2)
 
 	SimplifyFraction(answer);
 
-	std::cout << "Получившаяся дробь: " << answer.m_numerator
-		<< "/" << answer.m_denominator << std::endl;
+	return answer;
+}
+
+int Fraction::GetNumerator() const
+{
+	return m_numerator;
+}
+int Fraction::GetDenominator() const
+{
+	return m_denominator;
 }

@@ -6,13 +6,19 @@ int main()
 {
 	setlocale(LC_ALL, "rus");
 
-	House house{ "Улица Пушкина" };
+	Human hum1{ "Поляков Сергей Михайлович", 55 };
 
-	Apartment apar1{ 1, 1 };
+	Apartment apar1;
 
-	Human hum1{ "ААА", "жен", 33 };
+	House house;
+
+
 
 	apar1.AddHuman(hum1);
+
+	house.AddApartment(apar1);
+
+	house.ShowHouseInfo();
 
 	return 0;
 }
