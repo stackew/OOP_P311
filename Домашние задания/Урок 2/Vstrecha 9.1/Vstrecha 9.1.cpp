@@ -28,6 +28,23 @@ int main()
 	String str4(std::move(str3));
 	str4.CoutString();
 
+	std::cout << str4[3] << std::endl;
+
+	int index = str4('b');
+
+	if (index != -1)
+	{
+		std::cout << "Символ 'b' расположен под индексом: " << index << std::endl;
+	}
+	else
+	{
+		std::cout << "Символ не найден." << std::endl;
+	}
+
+	int strlen = (int)str4;
+
+	std::cout << strlen << std::endl;
+
 	std::cout << "Количество созданных объектов: " << String::GetCount() << std::endl;
 
 	return 0;

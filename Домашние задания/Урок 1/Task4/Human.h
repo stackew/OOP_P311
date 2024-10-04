@@ -11,17 +11,9 @@ public:
 
 	Human() : Human{"", 0} {}
 
-	Human(const Human& human)
-	{
-		m_initials = human.m_initials;
-		m_age = human.m_age;
-	}
+	Human(const Human& human);
 
-	void ShowHumanInfo()
-	{
-		std::cout << "Инициалы: " << m_initials << std::endl;
-		std::cout << "Возраст: " << m_age << std::endl;
-	}
+	void ShowHumanInfo();
 
 private:
 	std::string m_initials;

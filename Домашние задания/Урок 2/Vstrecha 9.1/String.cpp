@@ -18,7 +18,7 @@ String::~String()
 	delete[] m_string;
 }
 
-String::String(String&& string) : m_string{string.m_string}, m_size{string.m_size}
+String::String(String&& string) : m_string{ string.m_string }, m_size{ string.m_size }
 {
 	string.m_size = 0;
 	string.m_string = nullptr;

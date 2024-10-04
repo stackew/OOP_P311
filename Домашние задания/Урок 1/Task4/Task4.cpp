@@ -12,9 +12,11 @@ int main()
 
 	House house;
 
-
+	Human hum{ hum1 };
 
 	apar1.AddHuman(hum1);
+
+	apar1.AddHuman(hum);
 
 	house.AddApartment(apar1);
 
