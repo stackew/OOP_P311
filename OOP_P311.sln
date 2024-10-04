@@ -25,7 +25,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Урок 2", "Урок 2", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vstrecha 6.2", "Домашние задания\Урок 2\Vstrecha 6.2\Vstrecha 6.2.vcxproj", "{58C044C0-CAC4-4DBF-8322-B8AB0B18D36C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vstreacha 6.1", "Домашние задания\Урок 2\Vstrehca 6.1\Vstreacha 6.1.vcxproj", "{060CC062-A771-4243-9D1B-CF97F0611A88}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vstrecha 6.1", "Домашние задания\Урок 2\Vstrehca 6.1\Vstreacha 6.1.vcxproj", "{060CC062-A771-4243-9D1B-CF97F0611A88}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vstrecha 7.1", "Домашние задания\Урок 2\Vstrecha 7.1\Vstrecha 7.1.vcxproj", "{CB4A3859-6BEF-40C0-A7D1-2582E52CB0FC}"
 EndProject
@@ -36,6 +36,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vstrecha 8.2", "Vstrecha 8.2\Vstrecha 8.2.vcxproj", "{6836771C-F048-4AA3-9E62-53B008019DE9}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vstrecha 9.1", "Домашние задания\Урок 2\Vstrecha 9.1\Vstrecha 9.1.vcxproj", "{3BD86A5C-B8C6-4BCB-A051-DBB86B8D2AD8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vstrecha 10.1", "Домашние задания\Урок 2\Vstrecha 10.1\Vstrecha 10.1.vcxproj", "{AC065C2B-AD7D-4F14-B066-821526DF1607}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,6 +143,14 @@ Global
 		{3BD86A5C-B8C6-4BCB-A051-DBB86B8D2AD8}.Release|x64.Build.0 = Release|x64
 		{3BD86A5C-B8C6-4BCB-A051-DBB86B8D2AD8}.Release|x86.ActiveCfg = Release|Win32
 		{3BD86A5C-B8C6-4BCB-A051-DBB86B8D2AD8}.Release|x86.Build.0 = Release|Win32
+		{AC065C2B-AD7D-4F14-B066-821526DF1607}.Debug|x64.ActiveCfg = Debug|x64
+		{AC065C2B-AD7D-4F14-B066-821526DF1607}.Debug|x64.Build.0 = Debug|x64
+		{AC065C2B-AD7D-4F14-B066-821526DF1607}.Debug|x86.ActiveCfg = Debug|Win32
+		{AC065C2B-AD7D-4F14-B066-821526DF1607}.Debug|x86.Build.0 = Debug|Win32
+		{AC065C2B-AD7D-4F14-B066-821526DF1607}.Release|x64.ActiveCfg = Release|x64
+		{AC065C2B-AD7D-4F14-B066-821526DF1607}.Release|x64.Build.0 = Release|x64
+		{AC065C2B-AD7D-4F14-B066-821526DF1607}.Release|x86.ActiveCfg = Release|Win32
+		{AC065C2B-AD7D-4F14-B066-821526DF1607}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -161,6 +171,7 @@ Global
 		{70948AA5-3EA7-4506-9CA3-DA33ECF75C40} = {6B99158B-B84D-4196-947B-448E2A6925D2}
 		{6836771C-F048-4AA3-9E62-53B008019DE9} = {6B99158B-B84D-4196-947B-448E2A6925D2}
 		{3BD86A5C-B8C6-4BCB-A051-DBB86B8D2AD8} = {6B99158B-B84D-4196-947B-448E2A6925D2}
+		{AC065C2B-AD7D-4F14-B066-821526DF1607} = {6B99158B-B84D-4196-947B-448E2A6925D2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2180E2F3-A28E-4298-8F4D-018925237AD0}
