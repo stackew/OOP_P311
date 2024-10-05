@@ -33,29 +33,11 @@ public:
 
 	void CoutString() const;
 
-	char& operator[](int ind)
-	{
-		assert((ind >= 0 and ind < m_size) and "Выход за диапозон строки");
-		return m_string[ind];
-	}
+	char& operator[](int ind);
 
-	char operator[](int ind) const
-	{
-		assert((ind >= 0 and ind < m_size) and "Выход за диапозон строки");
-		return m_string[ind];
-	}
+	char operator[](int ind) const;
 
-	int operator()(char symbol) const
-	{
-		for (size_t i = 0; i < m_size; i++)
-		{
-			if (m_string[i] == symbol)
-			{
-				return i;
-			}
-		}
-		return -1;
-	}
+	int operator()(char symbol) const;
 
 	explicit operator int() const { return m_size; }
 };

@@ -34,3 +34,27 @@ void String::CoutString() const
 {
 	std::cout << "Ваша строка: " << m_string << std::endl;
 }
+
+int String::operator()(char symbol) const
+{
+	for (size_t i = 0; i < m_size; i++)
+	{
+		if (m_string[i] == symbol)
+		{
+			return i;
+		}
+	}
+	return -1;
+}
+
+char& String::operator[](int ind)
+{
+	assert((ind >= 0 and ind < m_size) and "Выход за диапозон строки");
+	return m_string[ind];
+}
+
+char String::operator[](int ind) const
+{
+	assert((ind >= 0 and ind < m_size) and "Выход за диапозон строки");
+	return m_string[ind];
+}
