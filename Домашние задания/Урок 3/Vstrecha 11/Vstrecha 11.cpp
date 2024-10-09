@@ -54,6 +54,53 @@ void SortArr(T* arr, size_t size)
 	}
 }
 
+template<typename T>
+T BinarySearch(T* arr, size_t size, T key)
+{
+	bool flag = false;
+	int left = 0, right = size - 1, mid;
+
+	while ((left <= right) && !flag)
+	{
+		mid = (left + right) / 2;
+
+		if (arr[mid] == key)
+		{
+			flag = true;
+		}
+		if (arr[mid] > key)
+		{
+			right = mid - 1;
+		}
+		else
+		{
+			left = mid + 1;
+		}
+	}
+	if (flag)
+	{
+		return mid;
+	}
+	else
+	{
+		return -1;
+	}
+}
+
+template<typename T>
+void ChangeElement(T* arr, size_t size, int index, T value)
+{
+	if (index < 0 || index >= size)
+	{
+		std::cout << "Такого индекса не существует." << std::endl;
+	}
+	else
+	{
+		arr[index] = value;
+		std::cout << "Элемент успешно изменен.";
+	}
+}
+
 int main()
 {
 	setlocale(LC_ALL, "rus");
@@ -70,6 +117,27 @@ int main()
 
 	SortArr(arr, size);
 	std::cout << "Отсортированный массив: ";
+	ShowArr(arr, size);
+
+	int key;
+	std::cout << "\nВведите значение элемента, который нужно найти: ";
+	std::cin >> key;
+	int index = BinarySearch(arr, size, key);
+	if (index != -1)
+	{
+		std::cout << key << " находится в массиве под индексом " << index << std::endl;
+	}
+	else
+	{
+		std::cout << "Элемент не найден." << std::endl;
+	}
+
+	int value_index, value;
+	std::cout << "Введите индекс элемента, который хотите изменить: ";
+	std::cin >> value_index;
+	std::cout << "Введите значение нового элемента: ";
+	std::cin >> value;
+	ChangeElement(arr, size, value_index, value);
 	ShowArr(arr, size);
 
 	return 0;
