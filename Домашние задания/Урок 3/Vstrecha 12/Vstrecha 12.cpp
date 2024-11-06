@@ -25,6 +25,18 @@ public:
 		}
 	}
 
+	void DisplayMatrix() const
+	{
+		for (size_t i = 0; i != rows_size; i++)
+		{
+			for (size_t j = 0; j != cols_size; j++)
+			{
+				std::cout << matrix[i][j] << " ";
+			}
+			std::cout << "\n";
+		}
+	}
+
 	void InitMatrix()
 	{
 		for (size_t i = 0; i != rows_size; i++)
@@ -47,7 +59,22 @@ public:
 			}
 		}
 	}
-	
+
+	Matrix<T>& operator= (const Matrix<T>& matrix_to_cpy)
+	{
+
+		for (size_t i = 0; i < rows_size; i++)
+		{
+			for (size_t j = 0; j < cols_size; j++)
+			{
+				matrix[i][j] = matrix_to_cpy.matrix[i][j];
+			}
+		}
+
+
+		return *this;
+	}
+
 	friend Matrix<T>& operator+(const Matrix<T>& matrix1, const Matrix<T>& matrix2)
 	{
 		Matrix<T> result(matrix1.rows_size, matrix1.cols_size);
@@ -66,7 +93,9 @@ public:
 			std::cout << "Размеры матриц должны быть одинаковы." << std::endl;
 			result.matrix = nullptr;
 		}
+
 		return result;
+
 	}
 
 	friend Matrix<T>& operator-(const Matrix<T>& matrix1, const Matrix<T>& matrix2)
@@ -138,29 +167,8 @@ public:
 		return result;
 	}
 
-	friend std::ostream& operator<<(std::ostream& output,
-		const Matrix& o_matrix)
-	{
-		if (o_matrix.matrix == nullptr)
-		{
-			output << "Пустая матрица." << std::endl;
-		}
-		else
-		{
-			for (size_t i = 0; i != o_matrix.rows_size; i++)
-			{
-				for (size_t j = 0; j != o_matrix.cols_size; j++)
-				{
-					output << o_matrix.matrix[i][j] << " ";
-				}
-				output << std::endl;
-			}
-		}
-
-		return output;
-	}
 private:
-	
+
 	size_t rows_size;
 	size_t cols_size;
 	T** matrix;
@@ -203,13 +211,16 @@ int main()
 	//matrix3.RandInitMatrix();
 	//matrix4.RandInitMatrix();
 
-	std::cout << matrix1 << "\n" << matrix2;
+	matrix1.DisplayMatrix();
+	matrix2.DisplayMatrix();
 
-	std::cout << matrix1 + matrix2;
+	Matrix<int> result = matrix1 + matrix2;
+
+	result.DisplayMatrix();
 	//matrix3.ShowMatrix();
 	//matrix4.ShowMatrix();
 
-	
+
 
 	return 0;
 }
