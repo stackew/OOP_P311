@@ -49,6 +49,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vstrecha 13", "Домашн
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Schetchick slov", "Домашние задания\Schetchick slov\Schetchick slov.vcxproj", "{2C1F246B-C7D3-4619-931E-02C6A0AE99CA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Binary_Tree", "Лабороторные работы\Binary_Tree\Binary_Tree.vcxproj", "{EC7C4426-5301-4A03-AB6D-D6A3ECF38A3F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -193,6 +195,14 @@ Global
 		{2C1F246B-C7D3-4619-931E-02C6A0AE99CA}.Release|x64.Build.0 = Release|x64
 		{2C1F246B-C7D3-4619-931E-02C6A0AE99CA}.Release|x86.ActiveCfg = Release|Win32
 		{2C1F246B-C7D3-4619-931E-02C6A0AE99CA}.Release|x86.Build.0 = Release|Win32
+		{EC7C4426-5301-4A03-AB6D-D6A3ECF38A3F}.Debug|x64.ActiveCfg = Debug|x64
+		{EC7C4426-5301-4A03-AB6D-D6A3ECF38A3F}.Debug|x64.Build.0 = Debug|x64
+		{EC7C4426-5301-4A03-AB6D-D6A3ECF38A3F}.Debug|x86.ActiveCfg = Debug|Win32
+		{EC7C4426-5301-4A03-AB6D-D6A3ECF38A3F}.Debug|x86.Build.0 = Debug|Win32
+		{EC7C4426-5301-4A03-AB6D-D6A3ECF38A3F}.Release|x64.ActiveCfg = Release|x64
+		{EC7C4426-5301-4A03-AB6D-D6A3ECF38A3F}.Release|x64.Build.0 = Release|x64
+		{EC7C4426-5301-4A03-AB6D-D6A3ECF38A3F}.Release|x86.ActiveCfg = Release|Win32
+		{EC7C4426-5301-4A03-AB6D-D6A3ECF38A3F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -219,6 +229,7 @@ Global
 		{FBCE54C2-F1AA-46A4-9B25-1867809C098B} = {09C6D548-89F9-4A0C-8678-6A883C0FB3D0}
 		{6AA9E859-D01D-41B1-856D-2E74E08C8FEE} = {09C6D548-89F9-4A0C-8678-6A883C0FB3D0}
 		{2C1F246B-C7D3-4619-931E-02C6A0AE99CA} = {8DF00A33-1E4C-4CAC-942F-EFC331A10D31}
+		{EC7C4426-5301-4A03-AB6D-D6A3ECF38A3F} = {59A48790-66E5-42B5-BD75-F8D6F4FF97A7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2180E2F3-A28E-4298-8F4D-018925237AD0}
