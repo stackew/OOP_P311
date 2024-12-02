@@ -107,8 +107,3 @@ Node* MinValueNode(Node* node)
 
 	return node;
 }
-
-int main()
-{
-
-}
