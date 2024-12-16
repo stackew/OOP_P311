@@ -61,6 +61,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Экзамен", "Экза�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hangman", "Экзамен\Hangman\Hangman.vcxproj", "{6168CBB0-659A-4D2D-91AA-B0798F6F7256}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FinancialManagement", "Экзамен\FinancialManagement\FinancialManagement.vcxproj", "{80406DC4-937C-4E38-9F97-20830CF0D49B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -237,6 +239,14 @@ Global
 		{6168CBB0-659A-4D2D-91AA-B0798F6F7256}.Release|x64.Build.0 = Release|x64
 		{6168CBB0-659A-4D2D-91AA-B0798F6F7256}.Release|x86.ActiveCfg = Release|Win32
 		{6168CBB0-659A-4D2D-91AA-B0798F6F7256}.Release|x86.Build.0 = Release|Win32
+		{80406DC4-937C-4E38-9F97-20830CF0D49B}.Debug|x64.ActiveCfg = Debug|x64
+		{80406DC4-937C-4E38-9F97-20830CF0D49B}.Debug|x64.Build.0 = Debug|x64
+		{80406DC4-937C-4E38-9F97-20830CF0D49B}.Debug|x86.ActiveCfg = Debug|Win32
+		{80406DC4-937C-4E38-9F97-20830CF0D49B}.Debug|x86.Build.0 = Debug|Win32
+		{80406DC4-937C-4E38-9F97-20830CF0D49B}.Release|x64.ActiveCfg = Release|x64
+		{80406DC4-937C-4E38-9F97-20830CF0D49B}.Release|x64.Build.0 = Release|x64
+		{80406DC4-937C-4E38-9F97-20830CF0D49B}.Release|x86.ActiveCfg = Release|Win32
+		{80406DC4-937C-4E38-9F97-20830CF0D49B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -268,6 +278,7 @@ Global
 		{E8476BE6-408A-4129-B54E-81353E0E51C5} = {D8CC34F3-30A6-4E18-AB85-44E9AD77E611}
 		{69770312-1E5E-483D-BB6A-A2CD3BA404CF} = {D8CC34F3-30A6-4E18-AB85-44E9AD77E611}
 		{6168CBB0-659A-4D2D-91AA-B0798F6F7256} = {4CC010F1-1FC8-4709-A58C-D7A9CB3C71A0}
+		{80406DC4-937C-4E38-9F97-20830CF0D49B} = {4CC010F1-1FC8-4709-A58C-D7A9CB3C71A0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2180E2F3-A28E-4298-8F4D-018925237AD0}
